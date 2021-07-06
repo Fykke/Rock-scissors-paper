@@ -1,11 +1,14 @@
 from tkinter import *
 import random
+import os
 #loga izmērs, krase
 rpc = Tk() #pats logs
 rpc.title('Rock scissors paper')
 rpc.geometry('298x246')
 rpc.resizable(width=False, height=False)
 rpc['bg'] = '#d6eaf8'
+
+path = os.path.dirname(os.path.realpath(__file__)) + "\\"
 
 #StringVar() - Ļauj izveidot enkuru virknei.
 
@@ -126,10 +129,10 @@ def paper():
     if your_score == n:
         winner.set('You won!')
 
-rock_photo = PhotoImage(file = r"rock.png")
-scissors_photo = PhotoImage(file = r"scissors.png")
-paper_photo = PhotoImage(file = r"paper.png")
-restart_photo = PhotoImage(file = r"restart.png")
+rock_photo = PhotoImage(file = path + "rock.png")
+scissors_photo = PhotoImage(file = path + "scissors.png")
+paper_photo = PhotoImage(file = path + "paper.png")
+restart_photo = PhotoImage(file = path + "restart.png")
 
 '''
 izvēles pogas
